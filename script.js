@@ -181,6 +181,9 @@ function generatePassword() {
   console.log("shuffled: " + (passwordArray));
   getRandom();
 
+   //clear password array
+   passwordArray = [];
+
 }
 
 // Get references to the #generate element
@@ -195,6 +198,9 @@ function writePassword() {
   var password = (tempArray.join(""));
 
   passwordText.value = password;
+
+  //clear temp array
+  tempArray = [];
 }
 
 // Add event listener to generate button
