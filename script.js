@@ -191,6 +191,9 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
+   //join removes , from array
+  var password = (tempArray.join(""));
+
   passwordText.value = password;
 }
 
