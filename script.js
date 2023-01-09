@@ -91,6 +91,7 @@ var upperCasedCharacters = [
 //init variables
 var passwordArray = [];
 var pLength = 0;
+var tempArray = [];
 
 // Function to prompt user for password options
 function getPasswordOptions() {
@@ -160,6 +161,16 @@ function shuffle(array) {
 // Function for getting a random element from an array
 function getRandom(arr) {
 
+  for (var i = 0; i < pLength; i++) {
+
+// random element from passwordArray
+    let randomIndex = Math.floor(Math.random() * passwordArray.length);
+    tempArray.push(passwordArray[randomIndex]);
+    console.log ("password elements " + (tempArray));
+    
+  }
+  
+return;
 }
 
 // Function to generate password with user input
@@ -168,6 +179,7 @@ function generatePassword() {
   getPasswordOptions();
   shuffle(passwordArray);
   console.log("shuffled: " + (passwordArray));
+  getRandom();
 
 }
 
