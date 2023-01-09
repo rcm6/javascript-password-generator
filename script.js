@@ -88,9 +88,54 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+//init variables
+var passwordArray = [];
+var pLength = 0;
+
 // Function to prompt user for password options
 function getPasswordOptions() {
 
+  //Prompt for Password length between 10 and 64.
+  pLength = parseInt(
+  prompt("Enter the length of the password between 10 and 64.")
+  );
+
+  //Validate input if invalid, user must hit generate password again
+  if (pLength < 10 || pLength > 64 || isNaN(pLength)) {
+    alert ("You did not enter a number between 10 and 64, please try again");
+    return false;
+  };
+
+  //Confirm for special characters
+  var pSpecial = confirm("Click OK to include special characters.");
+  if (pSpecial == true){
+    (passwordArray = passwordArray.concat(specialCharacters));
+  };
+
+  //Confirm for numbers
+  var pNumbers = confirm("Click OK to include numbers.");
+  if (pNumbers == true){
+    (passwordArray = passwordArray.concat(numericCharacters));
+  };
+
+  //Confirm for lower case characters
+  var pLower = confirm("Click OK to include lower case characters.");
+ if (pLower == true){
+    (passwordArray = passwordArray.concat(lowerCasedCharacters));
+  };
+
+  //Confirm for upper case characters
+  var pUpper = confirm("Click OK to include upper case characters.");
+   if (pUpper == true){
+    (passwordArray = passwordArray.concat(upperCasedCharacters));
+  };
+
+  //console.log (pLength, pSpecial, pNumbers, pLower, pUpper); // expected num, bool, bool, bool
+  console.log ("Initial: " + (passwordArray));
+  //console.log ("password array length " + (passwordArray.length));
+
+
+  return;
 }
 
 // Function for getting a random element from an array
