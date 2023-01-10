@@ -131,11 +131,6 @@ function getPasswordOptions() {
     (passwordArray = passwordArray.concat(upperCasedCharacters));
   };
 
-  //console.log (pLength, pSpecial, pNumbers, pLower, pUpper); // expected num, bool, bool, bool
-  console.log ("Initial: " + (passwordArray));
-  //console.log ("password array length " + (passwordArray.length));
-
-
   return;
 }
 
@@ -147,7 +142,6 @@ function getRandom(arr) {
 // random element from passwordArray
     let randomIndex = Math.floor(Math.random() * passwordArray.length);
     tempArray.push(passwordArray[randomIndex]);
-    console.log ("password elements " + (tempArray));
     
   }
   
