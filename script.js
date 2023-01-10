@@ -139,25 +139,6 @@ function getPasswordOptions() {
   return;
 }
 
-// Fisher yates algorithim to shuffle password array
-function shuffle(array) {
-  let currentIndex = array.length,  randomIndex;
-
-  // While there remain elements to shuffle.
-  while (currentIndex != 0) {
-
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex], array[currentIndex]];
-  }
-
-  return array;
-}
-
 // Function for getting a random element from an array
 function getRandom(arr) {
 
@@ -177,8 +158,6 @@ return;
 function generatePassword() {
 
   getPasswordOptions();
-  shuffle(passwordArray);
-  console.log("shuffled: " + (passwordArray));
   getRandom();
 
    //clear password array
