@@ -22,7 +22,7 @@ It will have a clean and polished user interface that is responsive, ensuring th
 
 
 ## Screengrab
-![Project Screenshot](/Screenshot.png?raw=true)
+![Project Screenshot](/screenshot.png?raw=true)
 
 ## Link
 [https://rcm6.github.io/javascript-password-generator/](https://rcm6.github.io/javascript-password-generator/)
